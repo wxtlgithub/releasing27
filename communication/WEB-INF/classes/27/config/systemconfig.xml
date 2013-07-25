@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodes>
+	<node>
+		<!-- 编号 -->
+		<id>60</id>
+		<!-- 名称 -->
+		<name>node60</name>
+		<clumpedType>N</clumpedType>
+		<!--IP地址 -->
+		<ip>58.68.247.163</ip>
+		<!--端口号 -->
+		<port>28860</port>
+		<!--命令访问路径 -->
+		<url>http://58.68.247.163:8060/business/cmd.ashx?cmd=</url>
+		<!--是否为主控网元 -->
+		<isMain>true</isMain>
+		<isLocal>false</isLocal>
+		<!-- 任务模块 -->
+		<taskListSchedule>
+			<!-- Task1 -->
+			<function>
+				<!-- 编号 -->
+				<id>11</id>
+				<!-- 名称 -->
+				<name>task1</name>
+				<!-- bean -->
+				<bean>task1</bean>
+				<type>PS</type>
+
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+					<function id="11" name="task1" desc="task1" bean="Task1">
+						<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+						<item key="maxNum" value="10000" desc="一次最大处理条数" />
+						<item key="taskSchRule" value="@{cycle(5)}" desc="执行规则" />
+					</function>
+				]]>
+				</config>
+			</function>
+			<!-- Task2 -->
+			<function>
+				<!-- 编号 -->
+				<id>12</id>
+				<!-- 名称 -->
+				<name>task2</name>
+				<!-- bean -->
+				<bean>task2</bean>
+				<type>MOP</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+					<function id="12" name="task2" desc="task2" bean="Task1">
+						<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+						<item key="maxNum" value="10000" desc="一次最大处理条数" />
+						<item key="taskSchRule" value="@{cycle(5)}" desc="执行规则" />
+					</function>
+				]]>
+				</config>
+			</function>
+		</taskListSchedule>
+		<!-- 通讯模块 -->
+		<moduleList>
+
+			<!-- 接口服务 -->
+			<function>
+				<id>1060</id>
+				<name>psModule1060</name>
+				<bean>psModule1060</bean>
+				<type>PS</type>
+				<isprepaid>true</isprepaid>
+				<config>
+				</config>
+			</function>
+			<function>
+				<id>1660</id>
+				<name>psModule1660</name>
+				<bean>psModule1660</bean>
+				<type>PS</type>
+				<config>
+				</config>
+			</function>
+			<!-- 下行处理 -->
+			<function>
+				<id>1160</id>
+				<name>mtpModule1160</name>
+				<bean>mtpModule1160</bean>
+				<type>MTP</type>
+				<config>
+				</config>
+			</function>
+
+			<!-- 状态报告匹配 -->
+			<function>
+				<id>1360</id>
+				<name>rptModule1360</name>
+				<bean>rptModule1360</bean>
+				<type>RPTP</type>
+				<config>
+				</config>
+			</function>
+
+			<!-- 上行 -->
+			<function>
+				<id>1460</id>
+				<name>mopModule1460</name>
+				<bean>mopModule1460</bean>
+				<type>MOP</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+				]]>
+				</config>
+			</function>
+
+			<!-- 分布式模块 -->
+			<function>
+				<id>1560</id>
+				<name>clumpedModule1560</name>
+				<bean>clumpedModule1560</bean>
+				<type>DISTRIBUTE</type>
+				<config></config>
+			</function>
+		</moduleList>
+		<!-- 功能模块 -->
+		<functionModuleList>
+			<function>
+				<!-- 编号 -->
+				<id>102</id>
+				<!-- 名称 -->
+				<name>module2</name>
+				<!-- bean -->
+				<bean>module2</bean>
+				<type>MTS</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+					<function id="102" name="module1" desc="module2" bean="module2">
+						<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+						<item key="maxNum" value="10000" desc="一次最大处理条数" />
+					</function>
+				]]>
+				</config>
+			</function>
+		</functionModuleList>
+	</node>
+	<node>
+		<!-- 编号 -->
+		<id>21</id>
+		<!-- 名称 -->
+		<name>node21</name>
+		<clumpedType>N</clumpedType>
+		<!--IP地址 -->
+		<ip>211.151.48.199</ip>
+		<!--端口号 -->
+		<port>28821</port>
+		<!--命令访问路径 -->
+		<url>http://211.151.48.199:8021/communication/cmd.ashx?cmd=</url>
+		<!--是否为主控网元 -->
+		<isMain>false</isMain>
+		<isLocal>false</isLocal>
+		<!-- 任务模块 -->
+		<taskListSchedule>
+			<!-- Task1 -->
+			<function>
+				<!-- 编号 -->
+				<id>11</id>
+				<!-- 名称 -->
+				<name>task1</name>
+				<!-- bean -->
+				<bean>task1</bean>
+				<type>PS</type>
+
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+					<function id="11" name="task1" desc="task1" bean="Task1">
+						<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+						<item key="maxNum" value="10000" desc="一次最大处理条数" />
+						<item key="taskSchRule" value="@{cycle(5)}" desc="执行规则" />
+					</function>
+				]]>
+				</config>
+			</function>
+			<!-- Task2 -->
+			<function>
+				<!-- 编号 -->
+				<id>12</id>
+				<!-- 名称 -->
+				<name>task2</name>
+				<!-- bean -->
+				<bean>task2</bean>
+				<type>MOP</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+					<function id="12" name="task2" desc="task2" bean="Task1">
+						<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+						<item key="maxNum" value="10000" desc="一次最大处理条数" />
+						<item key="taskSchRule" value="@{cycle(5)}" desc="执行规则" />
+					</function>
+				]]>
+				</config>
+			</function>
+		</taskListSchedule>
+		<!-- 通讯模块 -->
+		<moduleList>
+
+			<!-- 接口服务 -->
+			<function>
+				<id>1021</id>
+				<name>psModule1021</name>
+				<bean>psModule1021</bean>
+				<type>PS</type>
+				<config>
+				</config>
+			</function>
+			<function>
+				<id>1621</id>
+				<name>psModule1621</name>
+				<bean>psModule1621</bean>
+				<type>PS</type>
+				<config>
+				</config>
+			</function>
+			<!-- 下行处理 -->
+			<function>
+				<id>1121</id>
+				<name>mtpModule1121</name>
+				<bean>mtpModule1121</bean>
+				<type>MTP</type>
+				<config>
+				</config>
+			</function>
+
+			<!-- 状态报告匹配 -->
+			<function>
+				<id>1321</id>
+				<name>rptModule1321</name>
+				<bean>rptModule1321</bean>
+				<type>RPTP</type>
+				<config>
+				</config>
+			</function>
+
+			<!-- 上行 -->
+			<function>
+				<id>1421</id>
+				<name>mopModule1421</name>
+				<bean>mopModule1421</bean>
+				<type>MOP</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+				]]>
+				</config>
+			</function>
+
+			<!-- 分布式模块 -->
+			<function>
+				<id>1521</id>
+				<name>clumpedModule1521</name>
+				<bean>clumpedModule1521</bean>
+				<type>DISTRIBUTE</type>
+				<config></config>
+			</function>
+
+			<!-- 下行服务 移动 -->
+			<function>
+				<id>2101</id>
+				<name>mtsGatewayModule2101</name>
+				<bean>mtsGatewayModule2101</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+
+
+			<!-- 下行服务 移动 -->
+			<function>
+				<id>2111</id>
+				<name>mtsGatewayModule2111</name>
+				<bean>mtsGatewayModule2111</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+
+
+			<!-- 下行服务 移动 -->
+			<function>
+				<id>2112</id>
+				<name>mtsGatewayModule2112</name>
+				<bean>mtsGatewayModule2112</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务 电信 -->
+			<function>
+				<id>2121</id>
+				<name>mtsGatewayModule2121</name>
+				<bean>mtsGatewayModule2121</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务 联通 -->
+			<function>
+				<id>2104</id>
+				<name>mtsGatewayModule2104</name>
+				<bean>mtsGatewayModule2104</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			
+
+		</moduleList>
+		<!-- 功能模块 -->
+		<functionModuleList>
+			<function>
+				<!-- 编号 -->
+				<id>102</id>
+				<!-- 名称 -->
+				<name>module2</name>
+				<!-- bean -->
+				<bean>module2</bean>
+				<type>MTS</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+					<function id="102" name="module1" desc="module2" bean="module2">
+						<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+						<item key="maxNum" value="10000" desc="一次最大处理条数" />
+					</function>
+				]]>
+				</config>
+			</function>
+		</functionModuleList>
+	</node>
+	
+	<node>
+		<!-- 编号 -->
+		<id>22</id>
+		<!-- 名称 -->
+		<name>node22</name>
+		<clumpedType>N</clumpedType>
+		<!--IP地址 -->
+		<ip>124.42.127.84</ip>
+		<!--端口号 -->
+		<port>28822</port>
+		<!--命令访问路径 -->
+		<url>http://124.42.127.84:8022/business/cmd.ashx?cmd=</url>
+		<!--是否为主控网元 -->
+		<isMain>false</isMain>
+		<isLocal>false</isLocal>
+		<!-- 任务模块 -->
+		<taskListSchedule>
+			<!-- Task1 -->
+			<function>
+				<!-- 编号 -->
+				<id>11</id>
+				<!-- 名称 -->
+				<name>task1</name>
+				<!-- bean -->
+				<bean>task1</bean>
+				<type>PS</type>
+
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+<function id="11" name="task1" desc="task1" bean="Task1">
+<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+<item key="maxNum" value="10000" desc="一次最大处理条数" />
+<item key="taskSchRule" value="@{cycle(5)}" desc="执行规则" />
+</function>
+				]]>
+				</config>
+			</function>
+			<!-- Task2 -->
+			<function>
+				<!-- 编号 -->
+				<id>12</id>
+				<!-- 名称 -->
+				<name>task2</name>
+				<!-- bean -->
+				<bean>task2</bean>
+				<type>MOP</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+<function id="12" name="task2" desc="task2" bean="Task1">
+<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+<item key="maxNum" value="10000" desc="一次最大处理条数" />
+<item key="taskSchRule" value="@{cycle(5)}" desc="执行规则" />
+</function>
+				]]>
+				</config>
+			</function>
+		</taskListSchedule>
+		<!-- 通讯模块 -->
+		<moduleList>
+
+			<!-- 接口服务 -->
+			<function>
+				<id>1022</id>
+				<name>psModule1022</name>
+				<bean>psModule1022</bean>
+				<type>PS</type>
+				<config>
+				</config>
+			</function>
+
+			<!-- 下行处理 -->
+			<function>
+				<id>1102</id>
+				<name>mtpModule1102</name>
+				<bean>mtpModule1102</bean>
+				<type>MTP</type>
+				<config>
+				</config>
+			</function>
+
+			<!-- 状态报告匹配 -->
+			<function>
+				<id>1302</id>
+				<name>rptModule1302</name>
+				<bean>rptModule1302</bean>
+				<type>RPTP</type>
+				<config>
+				</config>
+			</function>
+
+			<!-- 上行 -->
+			<function>
+				<id>1402</id>
+				<name>mopModule1402</name>
+				<bean>mopModule1402</bean>
+				<type>MOP</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+				]]>
+				</config>
+			</function>
+
+			<!-- 分布式模块 -->
+			<function>
+				<id>1502</id>
+				<name>clumpedModule1502</name>
+				<bean>clumpedModule1502</bean>
+				<type>DISTRIBUTE</type>
+				<config></config>
+			</function>
+		</moduleList>
+		<!-- 功能模块 -->
+		<functionModuleList>
+			<function>
+				<!-- 编号 -->
+				<id>102</id>
+				<!-- 名称 -->
+				<name>module2</name>
+				<!-- bean -->
+				<bean>module2</bean>
+				<type>MTS</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+<function id="102" name="module1" desc="module2" bean="module2">
+<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+<item key="maxNum" value="10000" desc="一次最大处理条数" />
+</function>
+				]]>
+				</config>
+			</function>
+		</functionModuleList>
+	</node>
+	<!-- 远程 -->
+	<node>
+		<!-- 编号 -->
+		<id>23</id>
+		<!-- 名称 -->
+		<name>node23</name>
+		<clumpedType>N</clumpedType>
+		<!--IP地址 -->
+		<ip>211.151.48.199</ip>
+		<!--端口号 -->
+		<port>28823</port>
+		<!--命令访问路径 -->
+		<url>http://211.151.48.199:8023/communication/cmd.ashx?cmd=</url>
+		<!--是否为主控网元 -->
+		<isMain>false</isMain>
+		<isLocal>false</isLocal>
+		<!-- 任务模块 -->
+		<taskListSchedule>
+			<!-- Task1 -->
+			<function>
+				<!-- 编号 -->
+				<id>11</id>
+				<!-- 名称 -->
+				<name>task1</name>
+				<!-- bean -->
+				<bean>task1</bean>
+				<type>PS</type>
+
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+					<function id="11" name="task1" desc="task1" bean="Task1">
+						<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+						<item key="maxNum" value="10000" desc="一次最大处理条数" />
+						<item key="taskSchRule" value="@{cycle(5)}" desc="执行规则" />
+					</function>
+				]]>
+				</config>
+			</function>
+			<!-- Task2 -->
+			<function>
+				<!-- 编号 -->
+				<id>12</id>
+				<!-- 名称 -->
+				<name>task2</name>
+				<!-- bean -->
+				<bean>task2</bean>
+				<type>MOP</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+					<function id="12" name="task2" desc="task2" bean="Task1">
+						<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+						<item key="maxNum" value="10000" desc="一次最大处理条数" />
+						<item key="taskSchRule" value="@{cycle(5)}" desc="执行规则" />
+					</function>
+				]]>
+				</config>
+			</function>
+		</taskListSchedule>
+		<!-- 通讯模块 -->
+		<moduleList>
+
+			<!-- 接口服务 -->
+			<function>
+				<id>1003</id>
+				<name>psModule1003</name>
+				<bean>psModule1003</bean>
+				<type>PS</type>
+				<config>
+				</config>
+			</function>
+			<function>
+				<id>1013</id>
+				<name>psModule1013</name>
+				<bean>psModule1013</bean>
+				<type>PS</type>
+				<config>
+				</config>
+			</function>
+			<!-- 下行处理 -->
+			<function>
+				<id>1103</id>
+				<name>mtpModule1103</name>
+				<bean>mtpModule1103</bean>
+				<type>MTP</type>
+				<config>
+				</config>
+			</function>
+
+			<!-- 状态报告匹配 -->
+			<function>
+				<id>1303</id>
+				<name>rptModule1303</name>
+				<bean>rptModule1303</bean>
+				<type>RPTP</type>
+				<config>
+				</config>
+			</function>
+
+			<!-- 上行 -->
+			<function>
+				<id>1403</id>
+				<name>mopModule1403</name>
+				<bean>mopModule1403</bean>
+				<type>MOP</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+				]]>
+				</config>
+			</function>
+
+			<!-- 分布式模块 -->
+			<function>
+				<id>1503</id>
+				<name>clumpedModule1503</name>
+				<bean>clumpedModule1503</bean>
+				<type>DISTRIBUTE</type>
+				<config></config>
+			</function>
+
+			<!-- 下行服务 移动 -->
+			<function>
+				<id>2301</id>
+				<name>mtsGatewayModule2301</name>
+				<bean>mtsGatewayModule2301</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+
+
+			<!-- 下行服务 移动 -->
+			<function>
+				<id>2311</id>
+				<name>mtsGatewayModule2311</name>
+				<bean>mtsGatewayModule2311</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+
+
+			<!-- 下行服务 移动 -->
+			<function>
+				<id>2312</id>
+				<name>mtsGatewayModule2312</name>
+				<bean>mtsGatewayModule2312</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务 电信 -->
+			<function>
+				<id>2303</id>
+				<name>mtsGatewayModule2303</name>
+				<bean>mtsGatewayModule2303</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务 联通 -->
+			<function>
+				<id>2304</id>
+				<name>mtsGatewayModule2304</name>
+				<bean>mtsGatewayModule2304</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务 -->
+			<!-- <function> -->
+			<!-- <id>1204</id> -->
+			<!-- <name>mtsGatewayModule1204</name> -->
+			<!-- <bean>mtsGatewayModule1204</bean> -->
+			<!-- <type>MTS</type> -->
+			<!-- <config></config> -->
+			<!-- </function> -->
+			<!-- 下行服务 -->
+			<!-- <function> -->
+			<!-- <id>1205</id> -->
+			<!-- <name>mtsGatewayModule1205</name> -->
+			<!-- <bean>mtsGatewayModule1205</bean> -->
+			<!-- <type>MTS</type> -->
+			<!-- <config></config> -->
+			<!-- </function> -->
+			<!-- 下行服务 -->
+			<!-- <function> -->
+			<!-- <id>1206</id> -->
+			<!-- <name>mtsGatewayModule1206</name> -->
+			<!-- <bean>mtsGatewayModule1206</bean> -->
+			<!-- <type>MTS</type> -->
+			<!-- <config></config> -->
+			<!-- </function> -->
+			<!-- 下行服务 -->
+			<!-- <function> -->
+			<!-- <id>1207</id> -->
+			<!-- <name>mtsGatewayModule1207</name> -->
+			<!-- <bean>mtsGatewayModule1207</bean> -->
+			<!-- <type>MTS</type> -->
+			<!-- <config></config> -->
+			<!-- </function> -->
+
+		</moduleList>
+		<!-- 功能模块 -->
+		<functionModuleList>
+			<function>
+				<!-- 编号 -->
+				<id>102</id>
+				<!-- 名称 -->
+				<name>module2</name>
+				<!-- bean -->
+				<bean>module2</bean>
+				<type>MTS</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+					<function id="102" name="module1" desc="module2" bean="module2">
+						<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+						<item key="maxNum" value="10000" desc="一次最大处理条数" />
+					</function>
+				]]>
+				</config>
+			</function>
+		</functionModuleList>
+	</node>
+
+	<!-- **************************************************************************** -->
+	<!-- 远程 -->
+	<node>
+		<!-- 编号 -->
+		<id>27</id>
+		<!-- 名称 -->
+		<name>node27</name>
+		<clumpedType>S</clumpedType>
+		<!--IP地址 -->
+		<ip>221.179.196.34</ip>
+		<!--端口号 -->
+		<port>28827</port>
+		<!--命令访问路径 -->
+		<url>http://221.179.196.34:8027/communication/cmd.ashx?cmd=</url>
+		<!--是否为主控网元 -->
+		<isMain>false</isMain>
+		<isLocal>true</isLocal>
+		<!-- 任务模块 -->
+		<taskListSchedule>
+			<!-- Task1 -->
+			<function>
+				<!-- 编号 -->
+				<id>11</id>
+				<!-- 名称 -->
+				<name>task1</name>
+				<!-- bean -->
+				<bean>task1</bean>
+				<type>PS</type>
+
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+					<function id="11" name="task1" desc="task1" bean="Task1">
+						<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+						<item key="maxNum" value="10000" desc="一次最大处理条数" />
+						<item key="taskSchRule" value="@{cycle(5)}" desc="执行规则" />
+					</function>
+				]]>
+				</config>
+			</function>
+			<!-- Task2 -->
+			<function>
+				<!-- 编号 -->
+				<id>12</id>
+				<!-- 名称 -->
+				<name>task2</name>
+				<!-- bean -->
+				<bean>task2</bean>
+				<type>MOP</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+					<function id="12" name="task2" desc="task2" bean="Task1">
+						<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+						<item key="maxNum" value="10000" desc="一次最大处理条数" />
+						<item key="taskSchRule" value="@{cycle(5)}" desc="执行规则" />
+					</function>
+				]]>
+				</config>
+			</function>
+		</taskListSchedule>
+		<!-- 通讯模块 -->
+		<moduleList>
+			<function>
+				<id>2764</id>
+				<name>mtsGatewayModule2764</name>
+				<bean>mtsGatewayModule2764</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 接口服务 -->
+			<function>
+				<id>1027</id>
+				<name>psModule1027</name>
+				<bean>psModule1027</bean>
+				<type>PS</type>
+				<config>
+				</config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2701</id>
+				<name>mtsGatewayModule2701</name>
+				<bean>mtsGatewayModule2701</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2702</id>
+				<name>mtsGatewayModule2702</name>
+				<bean>mtsGatewayModule2702</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2703</id>
+				<name>mtsGatewayModule2703</name>
+				<bean>mtsGatewayModule2703</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2704</id>
+				<name>mtsGatewayModule2704</name>
+				<bean>mtsGatewayModule2704</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2705</id>
+				<name>mtsGatewayModule2705</name>
+				<bean>mtsGatewayModule2705</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2706</id>
+				<name>mtsGatewayModule2706</name>
+				<bean>mtsGatewayModule2706</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2707</id>
+				<name>mtsGatewayModule2707</name>
+				<bean>mtsGatewayModule2707</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2708</id>
+				<name>mtsGatewayModule2708</name>
+				<bean>mtsGatewayModule2708</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2709</id>
+				<name>mtsGatewayModule2709</name>
+				<bean>mtsGatewayModule2709</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2710</id>
+				<name>mtsGatewayModule2710</name>
+				<bean>mtsGatewayModule2710</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2711</id>
+				<name>mtsGatewayModule2711</name>
+				<bean>mtsGatewayModule2711</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2712</id>
+				<name>mtsGatewayModule2712</name>
+				<bean>mtsGatewayModule2712</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2713</id>
+				<name>mtsGatewayModule2713</name>
+				<bean>mtsGatewayModule2713</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2714</id>
+				<name>mtsGatewayModule2714</name>
+				<bean>mtsGatewayModule2714</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2715</id>
+				<name>mtsGatewayModule2715</name>
+				<bean>mtsGatewayModule2715</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2716</id>
+				<name>mtsGatewayModule2716</name>
+				<bean>mtsGatewayModule2716</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2717</id>
+				<name>mtsGatewayModule2717</name>
+				<bean>mtsGatewayModule2717</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2718</id>
+				<name>mtsGatewayModule2718</name>
+				<bean>mtsGatewayModule2718</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2719</id>
+				<name>mtsGatewayModule2719</name>
+				<bean>mtsGatewayModule2719</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2720</id>
+				<name>mtsGatewayModule2720</name>
+				<bean>mtsGatewayModule2720</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2721</id>
+				<name>mtsGatewayModule2721</name>
+				<bean>mtsGatewayModule2721</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2722</id>
+				<name>mtsGatewayModule2722</name>
+				<bean>mtsGatewayModule2722</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2723</id>
+				<name>mtsGatewayModule2723</name>
+				<bean>mtsGatewayModule2723</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2724</id>
+				<name>mtsGatewayModule2724</name>
+				<bean>mtsGatewayModule2724</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2725</id>
+				<name>mtsGatewayModule2725</name>
+				<bean>mtsGatewayModule2725</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2726</id>
+				<name>mtsGatewayModule2726</name>
+				<bean>mtsGatewayModule2726</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2727</id>
+				<name>mtsGatewayModule2727</name>
+				<bean>mtsGatewayModule2727</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2728</id>
+				<name>mtsGatewayModule2728</name>
+				<bean>mtsGatewayModule2728</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2729</id>
+				<name>mtsGatewayModule2729</name>
+				<bean>mtsGatewayModule2729</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2730</id>
+				<name>mtsGatewayModule2730</name>
+				<bean>mtsGatewayModule2730</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2731</id>
+				<name>mtsGatewayModule2731</name>
+				<bean>mtsGatewayModule2731</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2732</id>
+				<name>mtsGatewayModule2732</name>
+				<bean>mtsGatewayModule2732</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2733</id>
+				<name>mtsGatewayModule2733</name>
+				<bean>mtsGatewayModule2733</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2734</id>
+				<name>mtsGatewayModule2734</name>
+				<bean>mtsGatewayModule2734</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2735</id>
+				<name>mtsGatewayModule2735</name>
+				<bean>mtsGatewayModule2735</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2736</id>
+				<name>mtsGatewayModule2736</name>
+				<bean>mtsGatewayModule2736</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2737</id>
+				<name>mtsGatewayModule2737</name>
+				<bean>mtsGatewayModule2737</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2738</id>
+				<name>mtsGatewayModule2738</name>
+				<bean>mtsGatewayModule2738</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2739</id>
+				<name>mtsGatewayModule2739</name>
+				<bean>mtsGatewayModule2739</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2740</id>
+				<name>mtsGatewayModule2740</name>
+				<bean>mtsGatewayModule2740</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2741</id>
+				<name>mtsGatewayModule2741</name>
+				<bean>mtsGatewayModule2741</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2742</id>
+				<name>mtsGatewayModule2742</name>
+				<bean>mtsGatewayModule2742</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2743</id>
+				<name>mtsGatewayModule2743</name>
+				<bean>mtsGatewayModule2743</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2744</id>
+				<name>mtsGatewayModule2744</name>
+				<bean>mtsGatewayModule2744</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2745</id>
+				<name>mtsGatewayModule2745</name>
+				<bean>mtsGatewayModule2745</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2746</id>
+				<name>mtsGatewayModule2746</name>
+				<bean>mtsGatewayModule2746</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2747</id>
+				<name>mtsGatewayModule2747</name>
+				<bean>mtsGatewayModule2747</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2748</id>
+				<name>mtsGatewayModule2748</name>
+				<bean>mtsGatewayModule2748</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2749</id>
+				<name>mtsGatewayModule2749</name>
+				<bean>mtsGatewayModule2749</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2750</id>
+				<name>mtsGatewayModule2750</name>
+				<bean>mtsGatewayModule2750</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2751</id>
+				<name>mtsGatewayModule2751</name>
+				<bean>mtsGatewayModule2751</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2752</id>
+				<name>mtsGatewayModule2752</name>
+				<bean>mtsGatewayModule2752</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2753</id>
+				<name>mtsGatewayModule2753</name>
+				<bean>mtsGatewayModule2753</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2754</id>
+				<name>mtsGatewayModule2754</name>
+				<bean>mtsGatewayModule2754</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2755</id>
+				<name>mtsGatewayModule2755</name>
+				<bean>mtsGatewayModule2755</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2756</id>
+				<name>mtsGatewayModule2756</name>
+				<bean>mtsGatewayModule2756</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2757</id>
+				<name>mtsGatewayModule2757</name>
+				<bean>mtsGatewayModule2757</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2758</id>
+				<name>mtsGatewayModule2758</name>
+				<bean>mtsGatewayModule2758</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2759</id>
+				<name>mtsGatewayModule2759</name>
+				<bean>mtsGatewayModule2759</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行服务smgp -->
+			<function>
+				<id>2760</id>
+				<name>mtsGatewayModule2760</name>
+				<bean>mtsGatewayModule2760</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<function>
+				<id>2761</id>
+				<name>mtsGatewayModule2761</name>
+				<bean>mtsGatewayModule2761</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<function>
+				<id>2762</id>
+				<name>mtsGatewayModule2762</name>
+				<bean>mtsGatewayModule2762</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<function>
+				<id>2763</id>
+				<name>mtsGatewayModule2763</name>
+				<bean>mtsGatewayModule2763</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
+			<!-- 下行处理 -->
+			<function>
+				<id>1127</id>
+				<name>mtpModule1127</name>
+				<bean>mtpModule1127</bean>
+				<type>MTP</type>
+				<config>
+				</config>
+			</function>
+			<!-- 状态报告匹配 -->
+			<function>
+				<id>1327</id>
+				<name>rptModule1327</name>
+				<bean>rptModule1327</bean>
+				<type>RPTP</type>
+				<config>
+				</config>
+			</function>
+			<!-- 上行 -->
+			<function>
+				<id>1427</id>
+				<name>mopModule1427</name>
+				<bean>mopModule1427</bean>
+				<type>MOP</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+				]]>
+				</config>
+			</function>
+
+
+			<!-- 分布式模块 -->
+			<function>
+				<id>1527</id>
+				<name>clumpedModule1527</name>
+				<bean>clumpedModule1527</bean>
+				<type>DISTRIBUTE</type>
+				<config></config>
+			</function>
+
+		</moduleList>
+		<!-- 功能模块 -->
+		<functionModuleList>
+			<function>
+				<!-- 编号 -->
+				<id>102</id>
+				<!-- 名称 -->
+				<name>module2</name>
+				<!-- bean -->
+				<bean>module2</bean>
+				<type>MTS</type>
+				<!-- 配置 -->
+				<config key="config" desc="配置">
+				<![CDATA[ 
+					<function id="102" name="module1" desc="module2" bean="module2">
+						<item key="isLoadFileLog" value="0" desc="是否导出文件日志.0不导出，1导出" />
+						<item key="maxNum" value="10000" desc="一次最大处理条数" />
+					</function>
+				]]>
+				</config>
+			</function>
+		</functionModuleList>
+	</node>
+
+</nodes>
